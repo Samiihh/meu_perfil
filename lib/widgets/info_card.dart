@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
   // icone que sera exibido
-  final IconData icon;
+  final IconData? icon;
 
   final String text;
 
-  const InfoCard({super.key, required this.icon, required this.text});
+  const InfoCard({super.key, this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {

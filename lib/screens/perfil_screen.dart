@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_perfil/widgets/cardTest.dart';
 import 'package:meu_perfil/widgets/info_card.dart';
 
 //TELA DE PERFIL
@@ -91,6 +92,9 @@ class PerfilScreen extends StatelessWidget {
               SizedBox(height: 12),
 
               const InfoCard(icon: Icons.location_on, text: 'São Paulo - SP'),
+              SizedBox(height: 12),
+
+              const InfoCard(text: '@samira.v'),
               SizedBox(height: 30),
               const Text(
                 'Tecnologias',
@@ -114,6 +118,10 @@ class PerfilScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 35),
+              const Cardtest(text: 'Ola', title: 'Teste 1'),
+
+              const SizedBox(height: 35),
+
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
