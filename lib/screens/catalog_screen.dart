@@ -115,6 +115,20 @@ class CatalogScreen extends StatelessWidget {
                       color: Colors.blueGrey.shade50,
                       borderRadius: BorderRadius.circular(12),
                     ),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.shopping_bag, size: 40),
+
+                        const SizedBox(height: 8),
+                        Text(
+                          produtos[index],
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   );
                 },
               ),
