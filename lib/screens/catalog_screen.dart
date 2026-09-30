@@ -89,6 +89,36 @@ class CatalogScreen extends StatelessWidget {
             const SizedBox(height: 24),
 
             // Nossa GridView sera adicionada aqui
+            //Expanded utiliza o espaço que ainda estiver disponivel dentro da column.
+            // A parte superiro da tela ja possui o titulo ListView.
+            // O gridview pode ocupar o restante.
+            Expanded(
+              child: GridView.builder(
+                itemCount: produtos.length,
+                // Em uma gridview vertical
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  // representa a quantidade de coluna
+                  crossAxisCount: 2,
+                  //espaço horizontal entre as colunas
+                  crossAxisSpacing: 12,
+                  //  espaço vertical entre as linhas
+                  mainAxisSpacing: 12,
+                  //controla a porporção largura x altura
+                  childAspectRatio: 1.2,
+                ),
+
+                itemBuilder: (context, index) {
+                  return Container(
+                    padding: const EdgeInsets.all(12),
+
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey.shade50,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),

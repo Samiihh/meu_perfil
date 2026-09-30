@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meu_perfil/screens/catalog_screen.dart';
-import 'package:meu_perfil/screens/perfil_screen.dart';
+
+// import 'package:meu_perfil/screens/perfil_screen.dart';
 
 //FUNÇÃO MAIN
 // Nossa Função de entrada da aplicação
