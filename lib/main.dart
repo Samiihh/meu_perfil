@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_perfil/screens/catalog_screen.dart';
 import 'package:meu_perfil/screens/perfil_screen.dart';
 
 //FUNÇÃO MAIN
@@ -36,7 +37,10 @@ class MyApp extends StatelessWidget {
       ),
 
       //Primeira tela ser exibida
-      home: const PerfilScreen(),
+      // home: const PerfilScreen(),
+
+      // Nova tela de catalogo
+      home: const CatalogScreen(),
     );
   }
 }
