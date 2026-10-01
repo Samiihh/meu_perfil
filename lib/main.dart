@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_perfil/screens/catalog_screen.dart';
+import 'package:meu_perfil/screens/preferences_screen.dart';
 
 // import 'package:meu_perfil/screens/perfil_screen.dart';
 
@@ -41,7 +42,10 @@ class MyApp extends StatelessWidget {
       // home: const PerfilScreen(),
 
       // Nova tela de catalogo
-      home: const CatalogScreen(),
+      // home: const CatalogScreen(),
+
+      //Nova tela de prefrencias
+      home: const PreferencesScreen(),
     );
   }
 }
