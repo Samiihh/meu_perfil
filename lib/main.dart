@@ -5,7 +5,7 @@ import 'package:meu_perfil/screens/preferences_screen.dart';
 // import 'package:meu_perfil/screens/perfil_screen.dart';
 
 //FUNÇÃO MAIN
-// Nossa Função de entrada da aplicação
+//Nossa Função de entrada da aplicação
 void main() {
   //Onde inicia aplicação flutter
   //Neste projeto, o primeiro widget será o MyApp.
