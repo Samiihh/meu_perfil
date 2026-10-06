@@ -127,6 +127,7 @@ class CatalogScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
+                        
                       ],
                     ),
                   );
