@@ -130,7 +130,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     // recebe um widget exibido no final do campo
                     // usamos o IconButton para que o usuario possa tocar no icone
                     suffixIcon: IconButton(
-
                       // operador  ternario escolhe qual icone sera exibido
                       icon: Icon(
                         _ocultarSenha ? Icons.visibility : Icons.visibility_off,
@@ -144,17 +143,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       },
                     ),
                   ),
-                  
+
                   // recebe um bool
                   // true -> esconde os caracteres
                   // false -> mostra os caracteres
 
-                  // como usamos a variavel _ocultarSenha, o comportamento muda quando tocamos no botão de visibilidade 
+                  // como usamos a variavel _ocultarSenha, o comportamento muda quando tocamos no botão de visibilidade
                   obscureText: _ocultarSenha,
-                  
+
                   // chamado a cada alteração no texto do campo
                   onChanged: (value) {
-
                     // guardamos a senha para compara-la posteriomente com a confirmação
                     _senha = value;
                   },
@@ -173,6 +171,35 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                     return null;
                   },
+                ),
+
+                const SizedBox(height: 24),
+
+                // Botão cadastrar
+                SizedBox(
+                  // ocupa todo espaço disponivel
+                  width: double.infinity,
+
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // currentState acessa o estado  atual do form
+                      // ?. executa o validate() somente se o currentState não for null
+                      //?? false  vai usar o false caso o resultado seja null
+                      final fomularioValidado =
+                          _formKey.currentState?.validate() ?? false;
+
+                      // se todos os validators retornarem null, o validade() retorna true
+
+                      if (fomularioValidado) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Cadastro Validado com sucesso!'),
+                          ),
+                        );
+                      }
+                    },
+                    child: const Text('Cadastrar'),
+                  ),
                 ),
               ],
             ),
