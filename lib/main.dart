@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_perfil/screens/catalog_screen.dart';
+import 'package:meu_perfil/screens/events_screen.dart';
 import 'package:meu_perfil/screens/preferences_screen.dart';
 import 'package:meu_perfil/screens/register_screen.dart';
 
@@ -49,7 +50,10 @@ class MyApp extends StatelessWidget {
       // home: const PreferencesScreen(),
 
       // Nova tela de registro
-      home: const RegisterScreen(),
+      // home: const RegisterScreen(),
+
+      // nova tela de eventos
+      home: EventsScreen(),
     );
   }
 }
